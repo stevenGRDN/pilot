@@ -1,0 +1,177 @@
+html{
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before{
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  /* backface-visibility: hidden;
+  image-rendering: pixelated; */
+}
+
+body{
+  width:100svw;
+  height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  background-color: #1f1f1f;
+  display: grid;
+  place-content: center;
+}
+
+
+/* .H-P{
+  position: absolute;
+  left:50%;
+  transform: translate(-3%, 0);
+  translate: 94% 0%;
+  translate: 47% 23.5%;
+} */
+
+/* .letter-bot,
+.letter-top{
+  display: inline;
+} */
+
+.letter-top,
+.letter-bot{
+  display: inline-flex;
+  /* gap: 1vw; */
+  /* mix-blend-mode: lighten; */
+
+}
+
+.letters{
+  translate: 0 25%;
+}
+
+.letters svg{
+  width: min(12vw, 18vh);
+}
+
+.top-path{
+  /* mix-blend-mode: lighten; */
+  fill:#1f1f1f;
+  opacity: 1;
+  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+  clip-path: polygon(0 0, 100% 0, 100% 150%, 0 50%);
+  /* clip-path: polygon(0 0, 100% 0, 100% 50%, 0 -50%); */
+}
+
+.H-1{
+  opacity: 1;
+
+}
+
+.letter-top{
+  transform: translate(1rem, 0);
+  translate:30% 0;
+  translate:calc(30% + 0.55%) 0.5%;
+  /* translate:calc(34.6% + 0.6%) -11.43%; */
+
+  /* basically left: 50% then translate -50% but we have 5 100%s, so 100/5 =20 20/2 = 10%  */
+  /* then - 10% again cause we move it to the left etc */
+}
+
+.letter-bot{
+  /* translate: 40% -100%; */
+  /* translate:50% -100%; */
+  /*  */
+
+  translate:calc(50% - 0.67%) -98.5%;
+  /* transform: translate(-1vw, 0); */
+  /* translate:calc(45.25% - 0.67% + 0.5rem) -86.75%; */
+
+  /* translate:calc(40.66% - 0.67%) -74.5%; */
+  /* 9.44 ---- 23.5 */
+  /* 4.72 ---- 11.75*/
+  /* mix-blend-mode: lighten; */
+
+    /* backface-visibility: hidden;
+  image-rendering: pixelated; */
+}
+.letter-extra{
+  translate:calc(-100% - 1rem) 0;
+}
+
+.g-1{z-index: 10;}
+.g-2{z-index: 4;}
+.g-3{z-index: 3;}
+.g-4{z-index: 2;}
+.g-5{z-index: 1;}
+
+.letters-container{
+  display: grid;
+  place-content: center;
+  /* backface-visibility: hidden;
+  image-rendering: pixelated; */
+}
+
+.g-div{
+  /* backface-visibility: hidden;
+  image-rendering: pixelated; */
+  display: grid;
+  place-content: center;
+  margin-right: 1rem;
+  /* background-color: red; */
+}
+
+.bg-path-1,
+.bg-path-2{
+  translate: 0 -2%;
+}
+
+.line-2,
+.line-3,
+.line-4,
+.line-5{
+  opacity: 1;
+}
+
+.letter-extra{
+  opacity: 1;
+}
+
+/* -------- */
+
+.top-container{
+  top:0;
+  left:0;
+  position: absolute;
+  display: grid;
+  place-content: center;
+  width:100vw;
+  height:100vh;
+  overflow-x: hidden;
+}
+
+.noise-container{
+  top:0;
+  left:0;
+  position: absolute;
+  width:100vw;
+  height:100vh;
+  overflow: hidden;
+}
+
+.noiseLight{
+  top:0;
+  left:0;
+  position: absolute;
+  min-width:100%;
+  min-height: 100%;
+  filter: invert(1);
+  opacity: 0.2;
+  mix-blend-mode: multiply;
+}
+
+.scroll{
+  position: absolute;
+  top:100vh;
+  height:100vh;
+  width:100vw;
+  background-color: #fff;
+}

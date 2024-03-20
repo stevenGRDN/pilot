@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+  <style>
+    @keyframes bodyAnim{
+      0%{
+        scale: 0.5;
+        opacity: 0;
+      }
+
+      100%{
+        scale:1;
+        opacity: 1;
+      }
+    }
+
+    @keyframes letterTop1{
+      0%{
+        translate:calc(30% + 0.55%) 0.5%;
+      }
+      100%{
+        translate:calc(34.6% + 0.6%) -11.43%;
+      }
+    }
+
+    @keyframes letterBot1{
+      0%{
+        translate:calc(50% - 0.67%) -98.5%;
+      }
+      100%{
+        translate:calc(45.25% - 0.67% + 0.5rem) -86.75%;
+      }
+    }
+
+    @keyframes topPath1{
+      0%{
+        clip-path: polygon(0 0, 100% 0, 100% 150%, 0 50%);
+      }
+      100%{
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 0 -50%);
+      }
+    }
+
+    @keyframes letterTop2{
+      0%{
+        translate:calc(34.6% + 0.6%) -11.43%;
+      }
+      100%{
+        translate: 0 0;
+      }
+    }
+
+    @keyframes letterBot2{
+      0%{
+        translate:calc(45.25% - 0.67% + 0.5rem) -86.75%;
+      }
+      100%{
+        translate:0.8rem 5%;
+      }
+    }
+
+    @keyframes topPath2{
+      0%{
+        clip-path: polygon(54% 0, 100% 0, 100% 150%, -46% 100%);
+      }
+      100%{
+        clip-path: polygon(48% 0, 100% 0, 100% 150%, -52% 100%);
+      }
+    }
+
+    @keyframes letters{
+      0%{
+        translate:0 25%;
+      }
+      100%{
+        translate:0 0;
+      }
+    }
+
+    @keyframes groups{
+      0%{
+        opacity: 0;
+        translate:calc(-100% - 1rem) 0;
+      }
+      0.2%{
+        opacity: 1;
+      }
+      100%{
+        translate:0 0;
+        opacity: 1;
+      }
+    }
+
+    @keyframes groups-2{
+      0%{
+        opacity: 0;
+        translate:calc(-100% - 1rem) 0;
+      }
+      0.2%{
+        opacity: 1;
+      }
+      100%{
+        translate:0 0;
+        opacity: 1;
+      }
+    }
+
+    @keyframes groups-3{
+      0%{
+        opacity: 0;
+        translate:calc(-200% - 2rem) 0;
+      }
+      0.2%{
+        opacity: 1;
+      }
+      100%{
+        translate:0 0;
+        opacity: 1;
+      }
+    }
+
+    @keyframes groups-4{
+      0%{
+        opacity: 0;
+        translate:calc(-300% - 3rem) 0;
+      }
+      0.2%{
+        opacity: 1;
+      }
+      100%{
+        translate:0 0;
+        opacity: 1;
+      }
+    }
+
+    @keyframes groups-5{
+      0%{
+        opacity: 0;
+        translate:calc(-400% - 4rem) 0;
+      }
+      0.2%{
+        opacity: 1;
+      }
+      100%{
+        translate:0 0;
+        opacity: 1;
+      }
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="top-container">
+    <!-- <svg width="230" height="261" viewBox="0 0 230 261" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g opacity="0.5">
+      <path d="M115 254L223 191V65L115 128V254Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M115 254L7 191V65L115 128V254Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M115 2L7 65L115 128L223 65L115 2Z" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <path d="M7 11V191L115 254L223 191" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg> -->
+    <div class="letters">
+      <div class="letters-container">
+        <div class="letter-top">
+          <div class="P-1-div g-1 g-div">
+            <svg class="P-1" viewBox="0 0 230 261" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g>
+              <path d="M7.0293 69.807L114.91 7.13281L223.089 69.807V196.132L114.91 258.938L7.0293 196.132V69.807Z" fill="#1F1F1F"/>
+              <path d="M115 259.477L223 196.477V70.4766L115 133.477V259.477Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M115 259.477L7 196.477V70.4766L115 133.477V259.477Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M115 7.47656L7 70.4766L115 133.477L223 70.4766L115 7.47656Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <path class="line-1 line-p1-1" d="M7 196.477V70.4766L115 7.47656L223 70.4766L115 133.477L7 70.4766" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="I-2-div letter-extra g-2 g-div">
+            <!-- <svg class="P-Hidden" viewBox="0 0 230 261" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g>
+              <path d="M115 259.477L223 196.477V70.4766L115 133.477V259.477Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M115 259.477L7 196.477V70.4766L115 133.477V259.477Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M115 7.47656L7 70.4766L115 133.477L223 70.4766L115 7.47656Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <path d="M7 196.477V70.4766L115 7.47656L223 70.4766L115 133.477L7 70.4766" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg> -->
+            <svg class="I-2" viewBox="0 0 230 266" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <path d="M7.0293 69.807L114.91 7.13281L223.089 69.807V196.132L114.91 258.938L7.0293 196.132V69.807Z" fill="#1F1F1F"/>
+                <path d="M115 259.477L223 196.477V70.4766L115 133.477V259.477Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M115 259.477L7 196.477V70.4766L115 133.477V259.477Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M115 7.47656L7 70.4766L115 133.477L223 70.4766L115 7.47656Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <path class="line-2 line-i2-1" d="M7 70L115 7L223 70" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="line-2 line-i2-2" d="M115 7V259L7 196" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="line-2 line-i2-3" d="M223 196L115 259" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="L-3-div letter-extra g-3 g-div">
+            <svg class="L-3" viewBox="0 0 230 261" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <path class="bg-path-1" d="M7.0293 69.807L114.91 7.13281L223.089 69.807V196.132L114.91 258.938L7.0293 196.132V69.807Z" fill="#1F1F1F"/>
+                <path d="M115 254L223 191V65L115 128V254Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M115 254L7 191V65L115 128V254Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M115 2L7 65L115 128L223 65L115 2Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <path class="line-3 line-l3-1" d="M7 11V191L115 254L223 191" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="O-4-div letter-extra g-4 g-div">
+            <svg class="O-4" viewBox="0 0 230 267" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <path d="M7.0293 69.807L114.91 7.13281L223.089 69.807V196.132L114.91 258.938L7.0293 196.132V69.807Z" fill="#1F1F1F"/>
+                <path d="M115 259.477L223 196.477V70.4766L115 133.477V259.477Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M115 259.477L7 196.477V70.4766L115 133.477V259.477Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M115 7.47656L7 70.4766L115 133.477L223 70.4766L115 7.47656Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <path class="line-4 line-o4-1" d="M115 7.47656L7 70.4766V196.477L115 259.477L223 196.477V70.4766L115 7.47656Z" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="T-5-div letter-extra g-5 g-div">
+            <svg class="T-5" viewBox="0 0 230 267" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <path d="M7.0293 69.807L114.91 7.13281L223.089 69.807V196.132L114.91 258.938L7.0293 196.132V69.807Z" fill="#1F1F1F"/>
+                <path d="M115 259.477L223 196.477V70.4766L115 133.477V259.477Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M115 259.477L7 196.477V70.4766L115 133.477V259.477Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M115 7.47656L7 70.4766L115 133.477L223 70.4766L115 7.47656Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <path class="line-5 line-t5-1" d="M7 70.4766L115 7.47656V259.477" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="line-5 line-t5-2" d="M115 7.47656L223 70.4766" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+  
+        </div>
+        <div class="letter-bot">
+          <div class="H-1-div g-1 g-div">
+            <svg class="H-1 g-1" viewBox="0 0 230 267" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- <path d="M223.776 196.304L114.993 259.597L7.46289 196.304V70.4108L115.55 7.25586L223.776 72.3576V196.304Z" fill="#1F1F1F"/> -->
+              <g>
+              <path class="bot-path" d="M224.395 195.978L115.612 259.271L8.08203 195.978L08.082 75.0846L120.169 11.9297L224.395 72.0314V195.978Z" fill="#1F1F1F"/>
+              <path d="M115 259.477L223 196.477V70.4766L115 133.477V259.477Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M115 259.477L7 196.477V70.4766L115 133.477V259.477Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="top-path" d="M115 7.47656L7 70.4766L115 133.477L223 70.4766L115 7.47656Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <path class="line-1 line-h1-1" d="M7 70.4766L115 133.477L223 70.4766L115 7.47656" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="line-1 line-h1-2" d="M115 133.477V259.477" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="line-1 line-h1-3" d="M223 70.4766V196.477" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="O-2-div letter-extra g-2 g-div">
+            <svg class="O-2" viewBox="0 0 230 267" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g>
+              <path d="M7.0293 69.807L114.91 7.13281L223.089 69.807V196.132L114.91 258.938L7.0293 196.132V69.807Z" fill="#1F1F1F"/>
+              <path d="M115 259.477L223 196.477V70.4766L115 133.477V259.477Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M115 259.477L7 196.477V70.4766L115 133.477V259.477Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M115 7.47656L7 70.4766L115 133.477L223 70.4766L115 7.47656Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <path class="line-2 line-o2-1" d="M115 7.47656L7 70.4766V196.477L115 259.477L223 196.477V70.4766L115 7.47656Z" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="U-3-div letter-extra g-3 g-div">
+            <svg class="U-3" viewBox="0 0 230 261" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <path class="bg-path-2" d="M7.0293 69.807L114.91 7.13281L223.089 69.807V196.132L114.91 258.938L7.0293 196.132V69.807Z" fill="#1F1F1F"/>
+                <path d="M115 253.477L223 190.477V64.4766L115 127.477V253.477Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M115 253.477L7 190.477V64.4766L115 127.477V253.477Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M115 1.47656L7 64.4766L115 127.477L223 64.4766L115 1.47656Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <path class="line-3 line-u3-1" d="M7 37.4766V190.477L115 253.477L223 190.477V37.4766" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="S-4-div letter-extra g-4 g-div">
+            <svg class="S-4" viewBox="0 0 230 267" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <path d="M7.0293 69.807L114.91 7.13281L223.089 69.807V196.132L114.91 258.938L7.0293 196.132V69.807Z" fill="#1F1F1F"/>
+                <path d="M115 259.477L223 196.477V70.4766L115 133.477V259.477Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M115 259.477L7 196.477V70.4766L115 133.477V259.477Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M115 7.47656L7 70.4766L115 133.477L223 70.4766L115 7.47656Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <path class="line-4 line-s4-1" d="M223 70.4766L115 7.47656L7 70.4766L115 133.477V259.477L7 196.477" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="E-5-div letter-extra g-5 g-div">
+            <svg class="E-5" viewBox="0 0 230 267" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g>
+                <path d="M7.0293 69.807L114.91 7.13281L223.089 69.807V196.132L114.91 258.938L7.0293 196.132V69.807Z" fill="#1F1F1F"/>
+                <path d="M115 259.477L223 196.477V70.4766L115 133.477V259.477Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M115 259.477L7 196.477V70.4766L115 133.477V259.477Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M115 7.47656L7 70.4766L115 133.477L223 70.4766L115 7.47656Z" stroke="#8F8F8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <path class="line-5 line-e5-1" d="M223 70.4766L115 7.47656L7 70.4766L115 133.477" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+              <path class="line-5 line-e5-2" d="M115 259.477L7 196.477V70.4766" stroke="white" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg> 
+          </div>
+        </div>
+      </div>
+    </div>      
+  </div>
+  <div class="noise-container">
+    <!-- <svg class="noiseLight" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 700 700" opacity="1"><defs><filter id="nnnoise-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+        <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="4" seed="15" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence>
+        <feSpecularLighting surfaceScale="28" specularConstant="0.8" specularExponent="20" lighting-color="#ebebeb" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="specularLighting">
+              <feDistantLight azimuth="3" elevation="1"></feDistantLight>
+          </feSpecularLighting>
+        
+    </filter></defs><rect width="700" height="700" fill="transparent"></rect><rect width="700" height="700" fill="#a0a0a0" filter="url(#nnnoise-filter)"></rect></svg> -->
+    
+    <svg class="noiseLight"xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 700 700" opacity="1"><defs><filter id="nnnoise-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="linearRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="4" seed="15" stitchTiles="stitch" x="0%" y="0%" width="100%" height="100%" result="turbulence"></feTurbulence>
+      <feSpecularLighting surfaceScale="40" specularConstant="10" specularExponent="20" lighting-color="#fff" x="0%" y="0%" width="100%" height="100%" in="turbulence" result="specularLighting">
+            <feDistantLight azimuth="3" elevation="68"></feDistantLight>
+        </feSpecularLighting>
+      
+    </filter></defs><rect width="700" height="700" fill="transparent"></rect><rect width="700" height="700" fill="#fff" filter="url(#nnnoise-filter)"></rect></svg>
+    
+  </div>
+  <div class="scroll">
+    
+  </div>
+</body>
+</html>
