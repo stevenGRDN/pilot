@@ -2,6 +2,17 @@ html{
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: MazzardEB;
+  src: url(MazzardM-ExtraBold.otf);
+}
+
+@font-face {
+  font-family: MazzardR;
+  src: url(MazzardM-Regular.otf);
+}
+
+
 *,
 *::after,
 *::before{
@@ -12,6 +23,8 @@ html{
   image-rendering: pixelated; */
 }
 
+
+
 body{
   width:100svw;
   height: 100vh;
@@ -20,6 +33,7 @@ body{
   background-color: #1f1f1f;
   display: grid;
   place-content: center;
+  overflow-anchor: none;
 }
 
 
@@ -168,10 +182,70 @@ body{
   mix-blend-mode: multiply;
 }
 
-.scroll{
+.page2{
   position: absolute;
   top:100vh;
-  height:100vh;
+  min-height:100vh;
   width:100vw;
   background-color: #fff;
+}
+
+.p2Div{
+  font-family: MazzardEB, Verdana, Geneva, Tahoma, sans-serif;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  width:100%;
+  font-size: min(5.5vw, 20vh);
+  position:relative;
+  /* top:10%; */
+  translate: 0 4vh;
+  /* flex-wrap: wrap; */
+
+}
+
+.about-container{
+  position: relative;
+  left:50%;
+  translate: -47% 10vh;
+  top:20%;
+  display: flex;
+  gap:3%;
+
+  width: min(100%, 120rem);
+}
+
+.iframe{
+  width:60%;
+  aspect-ratio: 16/9 !important;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+
+.about{
+  width:30%;
+  font-family: MazzardR, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+  overflow-y: visible;
+  /* flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto; */
+}
+
+@media (aspect-ratio < 3/4){
+  .about-container{
+    /* background-color: red; */
+    flex-direction: column;
+  }
+
+  .about,.iframe{
+    width:92%;
+    gap:10%;
+    margin-bottom: 3%;
+  }
+
+  .p2Div{
+    font-size: 4rem;
+  }
 }
